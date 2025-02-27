@@ -29,4 +29,9 @@ public class HelloController {
     public String hello4(@RequestBody DTO user){
          return "Hello " + user.getFirstName() + " "+ user.getLastName() + " from BridgeLabz.";
     }
+
+    @PutMapping("/hello5/{firstName}")
+    public String hello5(@PathVariable String firstName, @RequestParam String lastName){
+        return "Hello " + firstName + " "+ lastName + " from BridgeLabz.";
+    }
 }
